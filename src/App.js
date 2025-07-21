@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './App.css';
 
-const WORDS = ['plant', 'train', 'crate', 'flame', 'brush'];
+//const WORDS = ['plant', 'train', 'crate', 'flame', 'brush'];
 const MAX_ATTEMPTS = 6;
 
 const GuessBox = ({ letter, color }) => (
@@ -45,7 +45,18 @@ function App() {
   const [status, setStatus] = useState('');
 
   useEffect(() => {
-    setAnswer(WORDS[Math.floor(Math.random() * WORDS.length)]);
+    fetch('https://api.datamuse.com/words?sp=?????&max=1000')
+      .then((res) => res.json())
+      .then((data) => {
+        const wordList = data.map((item) => item.word.toLowerCase());
+        const filteredWords = wordList.filter((word) => /^[a-z]{5}$/.test(word));
+        const randomWord = filteredWords[Math.floor(Math.random() * filteredWords.length)];
+        setAnswer(randomWord);
+      })
+      .catch((err) => {
+        console.error('Failed to fetch words:', err);
+        setAnswer('plant'); 
+      });
   }, []);
 
   const handleGuess = () => {

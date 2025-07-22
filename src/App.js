@@ -76,7 +76,7 @@ function App() {
 
   return (
     <div className="game-container">
-      <h1>Word Guess Game</h1>
+      <h1>Guess The Word!</h1>
 
       <Guesses guesses={guesses} answer={answer} />
 

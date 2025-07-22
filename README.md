@@ -8,7 +8,7 @@ Test your vocabulary, make 6 attempts, and get visual feedback on your guesses!
 ##  Preview
 
 <p align="center">
-  <img src="./preview.png"  alt="Game Preview" />
+  <img src="./preview.png"  width="75%" alt="Game Preview" />
 </p>
 
 ---

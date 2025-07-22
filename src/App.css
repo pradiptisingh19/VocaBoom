@@ -1,6 +1,6 @@
 body {
-  background-color: #111;
-  color: #fff;
+  background-color: #231F20;
+  color: #FEEFE5;
   font-family: 'Segoe UI', sans-serif;
   display: flex;
   justify-content: center;
@@ -8,9 +8,12 @@ body {
 }
 
 .game-container {
+  padding: 2rem;
+  background-color: #246A73 ;
   width: 100%;
   max-width: 400px;
   text-align: center;
+  border-radius: 15px;
 }
 
 .guess-row {
@@ -23,7 +26,7 @@ body {
 .guess-box {
   width: 50px;
   height: 50px;
-  background-color: #444;
+  background-color: #FEEFE5;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,6 +43,7 @@ body {
 input {
   padding: 10px;
   font-size: 18px;
+  background-color: #FEEFE5;
   width: 180px;
   margin-right: 10px;
   border-radius: 5px;
@@ -57,13 +61,14 @@ button {
 }
 
 button:hover {
-  background-color: gold;
+  color: #d4af37;
+  background-color: #254f55;
 }
 
 .status {
   margin-top: 20px;
   font-size: 18px;
-  color: #d4af37;
+  color: #e3c563;
 }
 
 .restart {

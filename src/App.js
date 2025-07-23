@@ -75,7 +75,16 @@ function App() {
   };
 
   return (
+    <>
+    
     <div className="game-container">
+      <div style={{ textAlign: "center", marginBottom: "1rem"}}>
+    <img
+      src="/logo.png"
+      alt="VocaBoom Logo"
+      style={{ height: "80px", objectFit: "contain" }}
+    />
+  </div>
       <h1>Guess The Word!</h1>
 
       <Guesses guesses={guesses} answer={answer} />
@@ -102,6 +111,7 @@ function App() {
         </button>
       )}
     </div>
+    </>
   );
 }
 
